@@ -1,0 +1,10 @@
+$def with (musicList)
+
+<em>Hello Raspberry Pi</em>
+
+<hr/>
+
+$ i = -1
+$for music in musicList:
+	$ i = i+1
+	$music.filepath <a href='./$i'>Play </a> <br/>
