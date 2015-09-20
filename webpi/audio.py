@@ -42,9 +42,11 @@ class Audio(object):
         self.index = int(index)
     
     def play(self):
+        self.stop()
         cmd = '/usr/bin/omxplayer \"' + str(self.boxes[self.index].filepath) + '\"'
         os.system(cmd)
         
     def stop(self):
-        pass
+        cmd = 'pgrep omxplayer | xargs kill -9'
+        os.system(cmd)
         
