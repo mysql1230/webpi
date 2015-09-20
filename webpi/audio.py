@@ -42,8 +42,8 @@ class Audio(object):
         self.index = int(index)
     
     def play(self):
-        cmd = 'omxplayer \"' + str(self.boxes[self.index].filepath) + '\"'
-        os.popen(cmd)
+        cmd = '/usr/bin/omxplayer \"' + str(self.boxes[self.index].filepath) + '\"'
+        os.system(cmd)
         
     def stop(self):
         pass
