@@ -1,10 +1,38 @@
 $def with (musicList)
 
-<em>Hello Raspberry Pi</em>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Raspberry Pi Controller</title> 
+  <link rel="shortcut icon" href="./static/favicon.png" />
+  <link rel="stylesheet" href="./static/global.css"/>
+</head>
+<body>
 
-<hr/>
 
-$ i = -1
-$for music in musicList:
-	$ i = i+1
-	$music.filepath <a href='./$i'>Play </a> <br/>
+<div id="container">
+	<div id="location">
+		<a href="/">home</a> &gt; Raspberry Pi
+	</div>
+
+
+	<ul>
+		$ i = -1
+		$for music in musicList:
+			$ i = i+1
+			<li>$music.filepath <a href='./$i'>Play </a> <br/></li>
+			<li>$music.filepath <a href='./$i'>Play again</a> <br/></li>
+	</ul>
+
+</div>
+
+
+<div id="footer"> 
+    <p>started by Burke </p>
+	<p><a href="https://github.com/gitstart/webpi">fork this page on GitHub</a></p>
+</div>
+
+
+</body> 
+</html>
