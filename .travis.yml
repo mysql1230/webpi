@@ -7,3 +7,7 @@ install: "pip install web.py"
 
 # command to run tests
 script: python test/run_all_tests.py
+
+notifications:
+  email:
+    - 451416118@qq.com
